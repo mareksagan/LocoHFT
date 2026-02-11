@@ -1,0 +1,49 @@
+[package]
+name = "LocoHFT"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+# Core async runtime - ADDED io-std feature
+tokio = { version = "1.35", features = ["rt-multi-thread", "macros", "sync", "time", "io-std"] }
+
+# Python integration
+pyo3 = { version = "0.20", features = ["auto-initialize", "abi3-py38"] }
+
+# Terminal UI
+dialoguer = "0.11"
+console = "0.15"
+indicatif = "0.17"
+
+# HTTP client for APIs
+reqwest = { version = "0.11", features = ["json"] }
+
+# Data processing
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+
+# Math/Stats
+statrs = "0.16"
+rand = "0.8"
+
+# Database
+rusqlite = { version = "0.30", features = ["bundled", "chrono"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Additional deps for engine
+crossbeam = "0.8"
+uuid = { version = "1.0", features = ["v4"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
