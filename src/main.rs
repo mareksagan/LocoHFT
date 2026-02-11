@@ -155,7 +155,7 @@ async fn main() -> Result<()> {
             3 => learning_center().await?,
             4 => settings_menu(state.clone()).await?,
             5 => {
-                println!("{}", style("Thanks for using Smart Money! Goodbye! 👋").green());
+                println!("{}", style("Thanks for using Loco HFT! Goodbye! 👋").green());
                 sleep(Duration::from_millis(500)).await;
                 break;
             }
@@ -170,7 +170,7 @@ fn print_welcome() {
     println!();
     println!("{}", style("╔═══════════════════════════════════════════════════════════════╗").cyan().bold());
     println!("{}", style("║                                                               ║").cyan().bold());
-    println!("{}", style("║           💰 SMART MONEY - Your AI Trading Assistant         ║").cyan().bold());
+    println!("{}", style("║           💰 LOCO HFT - Your AI Trading Assistant         ║").cyan().bold());
     println!("{}", style("║                                                               ║").cyan().bold());
     println!("{}", style("║    Make smarter investments with AI-powered insights         ║").cyan().bold());
     println!("{}", style("║    Practice risk-free, then trade with confidence            ║").cyan().bold());
@@ -1167,7 +1167,7 @@ async fn settings_menu(state: Arc<Mutex<AppState>>) -> Result<()> {
         "🎮 Practice Mode vs Live Trading",
         "🔑 API Keys (for real data)",
         "💵 Reset Practice Account",
-        "ℹ️  About Smart Money",
+        "ℹ️  About Loco HFT",
         "↩️  Back to Main Menu",
     ];
 
@@ -1294,10 +1294,10 @@ async fn reset_account(state: Arc<Mutex<AppState>>) -> Result<()> {
 
 async fn about_app() -> Result<()> {
     println!();
-    println!("{}", style("ℹ️  About Smart Money").bold().green());
+    println!("{}", style("ℹ️  About Loco HFT").bold().green());
     println!("{}", "═".repeat(50));
     
-    println!("\n{}", style("Smart Money v1.0").bold());
+    println!("\n{}", style("Loco HFT v1.0.0").bold());
     println!("Your friendly AI-powered trading assistant");
     
     println!("\n{}", style("What makes us different:").bold());

@@ -4,7 +4,7 @@ title Build Trading System
 color 0A
 
 echo ============================================
-echo  FIXED BUILD SYSTEM
+echo  BUILD SYSTEM
 echo ============================================
 echo.
 
